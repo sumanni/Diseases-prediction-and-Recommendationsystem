@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+}
+
+.glass-container {
+    padding: 40px;
+    max-width: 1300px;
+    margin: auto;
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 3rem;
+    color: #1e3a8a;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.symptom-form {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    margin-bottom: 50px;
+}
+
+.symptom-form h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.symptom-form select {
+    font-size: 1.2rem;
+    padding: 14px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid #f59e0b;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.symptom-form button {
+    padding: 16px 28px;
+    background-color: #f59e0b;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.symptom-form button:hover {
+    background-color: #d97706;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.results-wrapper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.results-card {
+    flex: 1 1 45%;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.results-card h2 {
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
+/* Predictions
+.prediction-charts {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+} */
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+}
+
+.prediction-label {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #1e293b;
+}
+
+/* Make prediction card span full width */
+.predictions-card {
+    flex: 1 1 100%;
+}
+
+/* Layout three disease predictions per line */
+.prediction-charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Precaution Card Styling */
+.precaution-card {
+    flex: 1 1 45%;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.precaution-card h2 {
+    font-size: 2rem;
+    color: #1d1e1f;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Updated Precaution List Style */
+.precaution-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.precaution-list li {
+    background: #93e8ee;
+    color: #040404;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 16px 24px;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.precaution-list li:hover {
+    transform: translateY(-4px);
+    background-color: #54cce4;
+}
+
+/* Circular chart */
+.circular-chart {
+    transform: rotate(-90deg);
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 10;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    animation: progress 1.5s ease-out forwards;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dashoffset: 283;
+    }
+
+    100% {
+        stroke-dashoffset: var(--dashoffset);
+    }
+}   
